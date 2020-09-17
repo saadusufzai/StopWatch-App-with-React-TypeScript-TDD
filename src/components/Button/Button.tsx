@@ -8,7 +8,7 @@ import classes from './Button.module.css'
 
 const Button = ({buttonAction , btnValue}:btn) => {
     return (
-        <div  className={classes.btn} onClick={()=>buttonAction} > {btnValue} </div>
+        <div  className={classes.btn} onClick={()=>buttonAction()} > {btnValue} </div>
     )
 }
 

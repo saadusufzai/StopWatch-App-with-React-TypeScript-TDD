@@ -33,19 +33,3 @@ describe('mounted Timer', () => {
   });
 
 
-  // Unit test
-  describe('SomeComponent', () => {
-    it('validates model on button click', () => {
-        
-        const wrapper = mount(
-          <Timer />
-        );
-        
-        const instance = wrapper.instance();
-        wrapper
-          .find('startTimer')
-          .at(0)
-          .simulate('click');
-        expect(validateSpy).toHaveBeenCalledTimes(1);
-      });
-    }
