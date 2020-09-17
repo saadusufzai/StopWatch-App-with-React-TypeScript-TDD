@@ -2,9 +2,13 @@ import React, {useState} from 'react'
 import Button from '../Button/Button'
 import classes from './Timer.module.css'
 
+type Timer ={
+  startTimer: ()=>void
+  stopTimer: ()=>void
+  resetTimer: ()=>void
+}
 
-
-const Timer = () => {
+const Timer = () :JSX.Element =>  {
     const [minutes, setMinutes] = useState(25)
     const [seconds, setSeconds] = useState(0)
     const [isOn, setIsOn] = useState(false)
