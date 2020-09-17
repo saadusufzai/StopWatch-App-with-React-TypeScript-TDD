@@ -2,12 +2,14 @@ import React, {useState} from 'react'
 import Button from '../Button/Button'
 import classes from './Timer.module.css'
 
+
+
 const Timer = () => {
     const [minutes, setMinutes] = useState(25)
     const [seconds, setSeconds] = useState(0)
     const [isOn, setIsOn] = useState(false)
 
-  const  startTimer = ()=> {
+  const  startTimer = ():void => {
         console.log('Starting timer.');
       }
     
