@@ -3,12 +3,23 @@
     height: 400px;
     border: 5px solid blue;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
     margin: 0 auto;
+
 }
 .buttonContainer{
     width: 100%;
     display: flex;
     padding: 5px;
+    
+}
+
+.timeDisplay{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content:center;
     
 }
