@@ -30,12 +30,13 @@ const [interval, setTimeInterval] = useState({})
   const runTimer = ()=>{
     if(updateMs === 100){
       updateMs = 0
-      updateS = seconds++
+      updateS++
       
     }
     if(updateS===60){
-      updateM++
       updateS = 0 
+      updateM++
+      
        }
     if(updateM===60){
       updateH++
@@ -71,8 +72,13 @@ const [interval, setTimeInterval] = useState({})
   return (
     <div className={classes.testContainer}>
       <div className={classes.timeDisplay}>
-        {minutes}:{seconds < 10 ? `0${seconds}` : seconds} :{mili<10? `0${mili}`: mili}
-      </div>
+        <div className={classes.time}>
+       <span>{minutes<10? `0${minutes}`:minutes}</span> :
+       <span> {seconds < 10 ? `0${seconds}` : seconds}</span> :
+        <span> {mili<10? `0${mili}`: mili}</span>
+     
+        </div>
+        </div>
       <div className={classes.buttonContainer}>
         <Button btnValue="Start" buttonAction={startTimer} />
         <Button btnValue="Stop Timer" buttonAction={stopTimer} />

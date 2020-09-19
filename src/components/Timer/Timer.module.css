@@ -1,28 +1,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-.testContainer{
-    width: 40%;
-    height: 400px;
-    font-family: 'Orbitron', sans-serif;
-    border: 5px solid blue;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    margin: 0 auto;
 
-}
 .buttonContainer{
     width: 100%;
     display: flex;
     padding: 5px;
     
 }
+.testContainer{
+    width: 70%;
+    margin: 0 auto;
+   
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+}
 
 .timeDisplay{
-    display: flex;
-    align-self: center;
-    align-items: center;
-    justify-content:center;
-    
+    font-family:Orbitron,sans-serif ;
+    font-size: 40px;
+    font-weight: 900;
+    border: solid rgb(0, 172, 252) 15px;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    margin: 0 auto;
+}
+.time{
+    width: 90%;
+    text-align: center;
+    margin-top: 35%;
+   display: flex;
+   align-items: center;
+   margin-left: 35px;
+}
+
+span{
+    margin: 10px;    
 }
