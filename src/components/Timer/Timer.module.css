@@ -1,43 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-
-.buttonContainer{
-    width: 100%;
-    display: flex;
-    padding: 5px;
-    
+.buttonContainer {
+  width: 100%;
+  display: flex;
+  padding: 15px;
 }
-.testContainer{
-    width: 70%;
-    margin: 0 auto;
-   
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
+.testContainer {
+  width: 50%;
+  margin: 20px auto;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.timeDisplay{
-    font-family:Orbitron,sans-serif ;
-    font-size: 40px;
-    font-weight: 900;
-    border: solid rgb(0, 172, 252) 15px;
-    border-radius: 50%;
-    width: 350px;
-    height: 350px;
-    margin: 0 auto;
+.timeDisplay {
+  font-family: Orbitron, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  border: solid rgb(0, 172, 252) 15px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 15px rgb(6, 123, 231);
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
 }
-.time{
-    width: 90%;
+.time {
+  width: 90%;
+  text-align: center;
+  margin-top: 35%;
+  display: flex;
+  align-items: center;
+  margin-left: 35px;
+}
+
+span {
+  margin: 10px;
+}
+h6{
     text-align: center;
-    margin-top: 35%;
-   display: flex;
-   align-items: center;
-   margin-left: 35px;
-}
-
-span{
-    margin: 10px;    
+    margin: 0;
+    margin-top: 10px;
 }

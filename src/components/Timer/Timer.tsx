@@ -10,7 +10,7 @@ type Timer = {
 
 };
 
-type interval ={
+type intervals ={
   setTimeInterval: React.Dispatch<React.SetStateAction<{}>>
 }
 
@@ -20,7 +20,7 @@ const Timer = () => {
   let [mili, setMili] = useState(0);
   let [hours, setHours]= useState(0)
 const [interval, setTimeInterval] = useState({})
-  let [isOn, setIsOn] = useState(true);
+  let [isOn, setIsOn] = useState(0);
   
   let updateMs = mili
   let updateS = seconds
@@ -48,25 +48,26 @@ const [interval, setTimeInterval] = useState({})
   }
 
   const startTimer = () => {
-    if(isOn===true){
-      console.log(seconds)
+    if(isOn !== 1){
       runTimer();
       setTimeInterval(setInterval(runTimer,10))
-      setIsOn(false)
+      setIsOn(1)
     }    
   }
 
   const stopTimer = () => {
     // clearInterval(interval)
-    clearInterval(Number(setTimeInterval))
-    setIsOn(false)
+    clearInterval(Number(interval))
+    setIsOn(2)
   };
 
   const resetTimer = () => {
     console.log("Resetting timer.");
-    clearInterval(Number(setTimeInterval))
+    clearInterval(Number(interval))
     setMinutes(0)
     setSeconds(0)
+    setMili(0)
+    setIsOn(0)
   };
 
   return (
@@ -76,9 +77,9 @@ const [interval, setTimeInterval] = useState({})
        <span>{minutes<10? `0${minutes}`:minutes}</span> :
        <span> {seconds < 10 ? `0${seconds}` : seconds}</span> :
         <span> {mili<10? `0${mili}`: mili}</span>
-     
         </div>
-        </div>
+        <h6>Stop Watch</h6>
+         </div>
       <div className={classes.buttonContainer}>
         <Button btnValue="Start" buttonAction={startTimer} />
         <Button btnValue="Stop Timer" buttonAction={stopTimer} />
