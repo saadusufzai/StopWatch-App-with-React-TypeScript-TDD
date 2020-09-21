@@ -16,20 +16,6 @@ describe('Timer', ()=>{
     })
 })
 
-describe('mounted Timer', () => {
-    let container: ReactWrapper<any, Readonly<{}>, React.Component<{}, {}, any>>;
-  
-    beforeEach(() => (container = mount(<Timer />)));
-  
-    it('invokes startTimer when the start button is clicked', () => {
-      const spy = jest.spyOn(container.instance(), 'startTimer');
-      container.instance().forceUpdate();
-      expect(spy).toHaveBeenCalledTimes(0);
-      container.find('.start-timer').first().simulate('click');
-      expect(spy).toHaveBeenCalledTimes(1);
-    });
-  
-    
-  });
+
 
 

@@ -81,7 +81,7 @@ const [interval, setTimeInterval] = useState({})
         <h6>Stop Watch</h6>
          </div>
       <div className={classes.buttonContainer}>
-        <Button btnValue="Start" buttonAction={startTimer} />
+        <Button  btnValue="Start" buttonAction={startTimer} />
         <Button btnValue="Stop Timer" buttonAction={stopTimer} />
         <Button btnValue="Reset Timer" buttonAction={resetTimer} />
       </div>
